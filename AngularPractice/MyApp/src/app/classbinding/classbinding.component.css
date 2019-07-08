@@ -1,0 +1,10 @@
+.backEffects {
+    background-color: yellow;
+}
+.textEffects {
+    color: red;
+    text-align: center;
+}
+.borderEffects {
+    border-style: dotted;
+}

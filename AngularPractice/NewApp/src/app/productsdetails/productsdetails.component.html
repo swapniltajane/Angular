@@ -1,0 +1,17 @@
+<div>
+  <h2>Products Details</h2>
+  <ng-container *ngFor="let item of products">
+    <div *ngIf="prodId == item.Id">
+      <dl>
+        <dt>Product Id</dt>
+        <dd>{{item.Id}}</dd>
+        <dt>Name</dt>
+        <dd>{{item.Name}}</dd>
+        <dt>Price</dt>
+        <dd>{{item.Price}}</dd>
+      </dl>
+    </div>
+  </ng-container>
+  <button (click)="PreviewClicked()">Preview</button>
+  <router-outlet></router-outlet>
+</div>

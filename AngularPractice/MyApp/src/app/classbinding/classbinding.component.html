@@ -1,0 +1,15 @@
+<fieldset>
+  <legend>Type Effects</legend>
+  <input type="text" [(ngModel)]="effects" placeholder="backEffects, textEffects, borderEffects" size="40"> 
+</fieldset>
+<h1 [ngClass]="effects">Sample Text</h1>
+<fieldset>
+  <legend>Select Effects</legend>
+  <input type="checkbox" name="backEffects" [(ngModel)]="isBackEffects">Background Effects
+  <br>
+  <input type="checkbox" name="borderEffects" [(ngModel)]="isBorderEffects">Border Effects
+  <br>
+  <input type="checkbox" name="textEffects" [(ngModel)]="isTextEffects">Text Effects
+</fieldset>
+<h1 [ngClass]="{backEffects:isBackEffects,borderEffects:isBorderEffects,textEffects:isTextEffects}">Sample Text</h1>
+

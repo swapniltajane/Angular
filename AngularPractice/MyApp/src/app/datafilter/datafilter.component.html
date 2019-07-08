@@ -1,0 +1,11 @@
+<div class="container">
+  <fieldset class="scheduler-border">
+    <legend class="scheduler-border">Select Category</legend>
+    <select [(ngModel)]="SelectedCategoryValue" (change)="OnCategoryChanged()" class="form-control">
+      <option value="All">All</option>
+      <option value="Shoes">Shoes</option>
+      <option value="Electronics">Electronics</option>
+    </select>
+  </fieldset>
+  <br>
+</div>

@@ -1,0 +1,30 @@
+<fieldset>
+  <legend>Choose Styles</legend>
+  <dl>
+    <dt>Alignment</dt>
+    <dd>
+      <input type="radio" value="left" name="align" [(ngModel)]="align">Left
+      <input type="radio" value="center" name="align" [(ngModel)]="align">Center
+      <input type="radio" value="right" name="align" [(ngModel)]="align">Right
+    </dd>
+    <dt>Background</dt>
+    <dd>
+      <select name="background" [(ngModel)]="background">
+        <option value="aqua">Aqua</option>
+        <option value="aquamarine">Aquamarine</option>
+        <option value="royalblue">Royalblue</option>
+      </select>
+      </dd>
+      
+      <dt>Text Color</dt>
+      <dd>
+      <select name="color" [(ngModel)]="color">
+        <option value="green">Green</option>
+        <option value="violet">Violet</option>
+        <option value="pink">Pink</option>
+      </select>
+    </dd>
+    </dl>
+  
+</fieldset>
+<h1 [ngStyle]="effectsObj()">Style Binding</h1>

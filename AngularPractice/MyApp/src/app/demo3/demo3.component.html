@@ -1,0 +1,34 @@
+<h1>Product Details</h1>
+  <table width="400" border="1">
+    <tr>
+      <td>
+          <dl>
+              <dt>Name =</dt>
+              <dd>{{product[0].Name}}</dd>
+              <dt>Category =</dt>
+              <dd>{{product[0].Category}}</dd>
+              <dt>Price =</dt>
+              <dd>{{product[0].Price}}</dd>
+              <dt>Preview</dt>
+              <dd><button (click)='Preview()'>{{btnText}}</button></dd>
+            </dl>
+      </td>
+      <td *ngIf = "preview">
+        <img [src]="product[0].Photo" width="200" height="200">
+      </td>
+    </tr> 
+  </table>
+
+  <h2>Electronics Product</h2>
+  <table width="400" border="1">
+    <th>Name</th>
+    <th>Category</th>
+    <th>Price</th>
+    <tr *ngFor = "let item of product">
+      <ng-container *ngIf = "item.Category=='Electronics'">
+          <td>{{item.Name}}</td>
+          <td>{{item.Category}}</td>
+          <td>{{item.Price}}</td>
+      </ng-container>
+    </tr>
+  </table>

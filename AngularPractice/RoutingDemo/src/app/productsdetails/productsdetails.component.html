@@ -1,0 +1,13 @@
+<p>
+  productsdetails works!
+</p>
+<h1>{{getId}}</h1>
+<table>
+  <ng-container *ngFor="let item of products">
+    <tr *ngIf="item.Id == getId">
+      <td>{{item.Id}}</td>
+      <td>{{item.Name}}</td>
+      <td>{{item.Price}}</td>
+    </tr>
+  </ng-container>
+</table>

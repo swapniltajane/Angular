@@ -1,0 +1,15 @@
+.btn{
+    background-color: aquamarine;
+    padding: 50px;
+}
+
+.btn:hover{
+    background-color: blueviolet;
+}
+
+.effect{
+    background-color: aquamarine;
+}
+.effect:hover{
+    background-color: blueviolet;
+}

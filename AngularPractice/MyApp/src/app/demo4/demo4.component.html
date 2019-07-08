@@ -1,0 +1,29 @@
+<section>
+  <dl>
+    <dt>Name :</dt>
+    <dd><input type="text" name="Name" [(ngModel)]="Name"></dd>
+    <dt>Price :</dt>
+    <dd><input type="text" name="Price" [(ngModel)]="Price"></dd>
+    <dt>City :</dt>
+    <dd>
+      <select name="city" [(ngModel)]="City">
+        <option value="Hyd">Hyd</option>
+        <option value="Delhi">Delhi</option>
+      </select>
+    </dd>
+    <dt>Availability:</dt>
+    <dd><input type="radio" value="Available" name="stock" [(ngModel)]="stock">Yes</dd>
+    <dd><input type="radio" value="Out of Stock" name="stock" [(ngModel)]="stock">No</dd>
+  </dl>
+</section>
+<section>
+  <dt>Name:</dt>
+  <dd>{{Name}}</dd>
+  <dt>Price:</dt>
+  <dd>{{Price}}</dd>
+  <dt>City:</dt>
+  <dd>{{City}}</dd>
+  <dt>Availability:</dt>
+  <dd>{{stock}}</dd>
+
+</section>

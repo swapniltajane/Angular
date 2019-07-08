@@ -1,0 +1,9 @@
+<div class="container">
+  <form (submit)="f1()">
+    <div class="form-group mt-3">
+      <input type="text" [(ngModel)]="name" (copy)="OnCopy()" (paste)="OnPaste()" (cut)="OnCut()" (blur)="OnBlur()" class="form-control" placeholder="Enter Text Here">
+      <span class="text-info">{{msg}}</span>
+    </div>
+    <input type="submit" value="submit" class="btn btn-success btn-block">
+  </form>
+</div>

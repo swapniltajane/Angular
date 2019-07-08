@@ -1,0 +1,12 @@
+<div *ngFor= "let car of cars" class="container text-center">
+  <h2>{{car.Name}}</h2>
+  <div>
+    <img [src]="car.Photo" width="200" height="200">
+    <br>
+    {{car.Likes}}
+    <button (click)="Liked(car)">Like(s)</button>
+    <span>|</span>
+    {{car.Dislikes}}
+    <button (click)="Disliked(car)">Dislike(s)</button>
+  </div>
+</div>

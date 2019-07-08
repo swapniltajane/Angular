@@ -1,0 +1,18 @@
+<div class="container">
+  <table class="table">
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+    </tr>
+    <tr *ngFor="let item of products">
+      <td>{{item.Name}}</td>
+      <td>{{item.Price}}</td>
+    </tr>
+  </table>
+  <h2>Captcha Testing</h2>
+  <h3>{{code}}</h3>
+  <input type="text" placeholder="Enter the code" [(ngModel)]="enteredCode" (keyup)="CodeEntered()">
+  <span>{{msg}}</span>
+
+  <h4>{{number | Square}}</h4>
+</div>

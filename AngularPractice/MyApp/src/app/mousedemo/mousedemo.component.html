@@ -1,0 +1,15 @@
+<body (mousemove)="ApplyPosition($event)">
+    <div>
+      <h2>Mouse Over Effect</h2>
+        <img [src]="imagePath" (mouseover)="ShowRangeRover()" (mouseout)="ShowAudi()" width="500" height="400">
+    </div>
+    <br>
+    <div>
+      <h2>Mouse Click Effect</h2>
+        <img [src]="imagePath1" (mousedown)="ON()" (mouseup)="OFF()" width="400" height="300">
+    </div>
+  <div style="height: 1000px">
+  </div>
+   <!-- <img src="assets/dog.gif" [ngStyle]="Animate()" width="80" height="80">-->
+
+</body>

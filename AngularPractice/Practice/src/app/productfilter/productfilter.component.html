@@ -1,0 +1,11 @@
+<h1>Select a Products</h1>
+
+<dl>
+    <dt>All {{AllCount}}</dt>
+    <dd><input type="radio" name="product" value="All" [(ngModel)]="selectedValue" (change)="OnChangeValue()"></dd>
+    <dt>Electronics {{ElectronicsCount}}</dt>
+    <dd><input type="radio" name="product" value="Electronics" [(ngModel)]="selectedValue" (change)="OnChangeValue()"></dd>
+    <dt>Shoes {{ShoesCount}}</dt>
+    <dd><input type="radio" name="product" value="Shoes" [(ngModel)]="selectedValue" (change)="OnChangeValue()"></dd>
+</dl>
+<h2>{{selectedValue}}</h2>

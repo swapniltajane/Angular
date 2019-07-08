@@ -1,0 +1,5 @@
+<div *ngFor="let item of products">
+  <fieldset *ngIf="item.Id == prodId">
+    <img [src]=item.Img alt="Image" width="150" height="150">
+  </fieldset>
+</div>

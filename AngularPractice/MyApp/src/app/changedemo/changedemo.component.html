@@ -1,0 +1,70 @@
+
+<header>
+  <h3>Shopping App</h3>
+</header>
+<div class="select">
+    <div class="container">
+        <div class="form-group">
+          <label for="select">Category</label>
+            <div>
+              <select class="form-control" [(ngModel)]='category' (change)="CategoryChanged()">
+                <option *ngFor="let item of categories">{{item}}</option>
+              </select>
+            </div>
+        </div>
+      
+        <div class="form-group">
+            <label for="select">Product</label>
+              <div>
+                <select class="form-control" [(ngModel)]='product' (change)="ProductChanged()">
+                  <option *ngFor="let item of productList">{{item}}</option>
+                </select>
+              </div>
+          </div>
+</div>
+
+    <div class="form-group" [ngStyle]="HideDetails()">
+      <div class="form-group text-center" id="displayDiv">
+        <h2>{{prodName}}</h2>
+        <div>
+          <img [src]="prodPhoto" width="200" height="150" class="img-rounded">
+        </div>
+        <h3>{{prodPrice}}</h3>
+        <div class="form-group row text-center qty">
+          <div class="col-xs-4 text-center">
+            <label for="qty">Enter Quantity :</label>
+            <input type="number" min="1" max="5" [(ngModel)]="prodQty" class="form-control" id="qty">
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="container text-center">
+        <button (click)="AddDetails()" class="btn btn-primary">Add to Cart</button>
+        <br>
+        <br>
+        <div [ngStyle]="HideTable()">
+          <table width="100%" class="table-striped">
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Preview</th>
+            <th>Total Price</th>
+            <th>Action</th>
+            <tr *ngFor="let item of prodDetails; let i=index">
+              <td>{{item.Name}}</td>
+              <td>{{item.Price}}</td>
+              <td>{{item.Quantity}}</td>
+              <td><img [src]="item.Preview" width="50" height="50"></td>
+              <td>{{item.Total}}</td>
+              <td><button (click)="DeleteRec(i)" class="btn btn-danger">Delete</button></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">Grand Total = {{grandTotal}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+</div>

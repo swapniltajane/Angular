@@ -1,0 +1,38 @@
+<div class="container">
+  <h2 class="header bg-primary p-2 text-light mx-0 my-2">Regstration</h2>
+  <div class="form-group">
+    <label for="UserName">User Name</label>
+    <input type="text" [(ngModel)]="userName" class="form-control" id="UserName" (keyup)="UserNameValidation()" placeholder="Enter User Name">
+    <span [ngClass]="{'text-success':true ,'msg':msg}">{{msgUser}}</span>
+  </div>
+  <div class="form-group">
+      <label for="Password">Password</label>
+      <input type="password" data-toggle="password" [(ngModel)]="userPwd" class="form-control" id="Password" (keyup)='PasswordValidation()' placeholder="Enter Password">
+      <span [ngStyle]="msgPwdColor()"><meter [max]="max"  [min]="min" [low]="low" [high]="high" [value]="value"></meter>{{msgPwd}}</span>
+  </div>
+  <div class="form-group">
+      <label for="CPassword">Confirm Password</label>
+      <input type="password" [(ngModel)]="confirmUserPwd" class="form-control" id="CPassword" (keyup)='ConfirmPasswordValidation()' placeholder="Confirm Password">
+      <span [ngClass]="{'text-success':cPwdColor,'text-danger':cPwdColor1,'msg':msg}">{{msgConfirmPwd}}</span>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-success btn-block" (click)='AddRecord()'>Submit</button>
+  </div>
+  <br><br>
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>User Name</th>
+          <th>Password</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let item of userData">
+        <td>{{item.id}}</td>
+        <td>{{item.user_name}}</td>
+        <td>{{item.password}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

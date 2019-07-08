@@ -1,0 +1,14 @@
+<div>
+  <img src="assets/colorStrip.png" width="100%" (mousemove)="colorChange($event)">
+</div>
+{{position}}
+
+<div id="divBlock" [ngStyle]="colorBlock()">
+</div>
+<div>
+  <table>
+    <tr *ngFor= "let row of rows; let i= index" [ngStyle]="colorTable()">
+      <td *ngFor="let cols of rows"></td>
+    </tr>
+  </table>
+</div>

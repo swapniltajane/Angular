@@ -1,0 +1,36 @@
+#divBlock {
+    width: 100px;
+    height: 100px;
+    top: 110px;
+    position: fixed;
+    animation: move1 8s infinite alternate-reverse;
+}
+
+@keyframes move1{
+    0%{
+        left: 0px;
+    }
+    100%{
+        left: 1260px;
+    }
+}
+
+table td {
+    width: 114px;
+    height: 110px;
+    border: 1px solid red;
+}
+
+ /*tr:nth-child(2) {
+    background-color: blue;
+    animation: colorChange 1s infinite;
+}
+*/
+@keyframes colorChange{
+    0%{
+        background-color: aqua;
+    }
+    100%{
+        background-color: black;
+    }
+}

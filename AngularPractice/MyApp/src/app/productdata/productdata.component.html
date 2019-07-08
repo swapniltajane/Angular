@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Products Description</h1>
+  <app-productfilter (ChangeCategory)="onCategoryChanged($event)" [AllCount]="allCount()" [ElectronicsCount]="electronicsCount()" [ShoesCount]="shoesCount()"></app-productfilter>
+  <table class="table">
+    <th>Name</th>
+    <th>Price</th>
+    <th>Category</th>
+    <ng-container *ngFor="let item of products">
+      <tr *ngIf="selectedCategory=='All' || selectedCategory==item.Category">
+        <td>{{item.Name}}</td>
+        <td>{{item.Price}}</td>
+        <td>{{item.Category}}</td>
+      </tr>
+    </ng-container>
+  </table>
+</div>

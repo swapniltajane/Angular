@@ -1,0 +1,42 @@
+<div class="container">
+  <form action="" #frmRegister="ngForm" class="form">
+    <h3>Register User</h3>
+    <div class="form-group">
+      <label for="uname" class="control-label">User Name</label>
+      <input type="text" name="uname" #uname="ngModel" class="form-control" ngModel required>
+      <span *ngIf="uname.invalid" class="text-danger">User Name Required</span>
+    </div>
+
+    <div class="form-group">
+      <label for="mobile" class="control-label">Mobile</label>
+      <input type="text" name="mobile" #mobile="ngModel" class="form-control" ngModel  required pattern="\+91[0-9]{10}">
+      <div *ngIf="mobile.invalid">
+        <span *ngIf="mobile.errors.required" class="text-danger">Mobile Required</span>
+        <span *ngIf="mobile.errors.pattern" class="text-danger">Mobile Invalid</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="city" class="control-label">Select a city</label>
+      <div>
+        <select name="city" #city="ngModel" class="form-control" (change)="OnChange(city.value)" ngModel>
+          <option *ngFor="let item of cities">{{item}}</option>
+        </select>
+        <span *ngIf="isInValid" class="text-danger">Invalid City</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="even" class="control-label">Even Number</label>
+      <input type="text" class="form-control" name="even" #even="ngModel" ngModel required (blur)="CheckEven(even.value)">
+      <div *ngIf="even.invalid">
+          <span class="text-danger" *ngIf="even.errors.required">Number is required</span>
+      </div>
+      <span class="text-danger" *ngIf="isEvenInValid">Number is not even</span>
+    </div>
+
+    <div class="form-group">
+        <button [disabled]="frmRegister.invalid" class="btn btn-block btn-primary">Submit</button>
+    </div>
+  </form>
+</div>

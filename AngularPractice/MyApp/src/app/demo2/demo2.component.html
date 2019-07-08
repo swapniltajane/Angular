@@ -1,0 +1,31 @@
+<p>
+  demo2 works!
+</p>
+<div>
+  <h2>{{title}}</h2>
+  <ol>
+    <li *ngFor="let item of products">
+      {{item}}
+    </li>
+  </ol>
+  <ol>
+    <li *ngFor="let item of shopping">
+      {{item.categoery}}
+      <ol>
+        <li *ngFor="let product of item.products">
+          {{product}}
+        </li>
+      </ol>
+    </li>
+  </ol>
+</div>
+<table [width]="width" [border]="border">
+  <th>Id</th>
+  <th>Name</th>
+  <th>Age</th>
+  <tr *ngFor= "let item of personalInfo">
+    <td>{{item.id}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.age}}</td>
+  </tr>
+</table>

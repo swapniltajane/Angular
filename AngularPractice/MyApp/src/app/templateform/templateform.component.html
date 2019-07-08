@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="card mt-5">
+    <div class="card-head bg-primary text-center p-3 text-white">
+        <h2>Register Form</h2>
+    </div>
+    <div class="card-body bg-light">
+        <form #regForm="ngForm" (submit)="OnSubmit(regForm.value)" class="form-group">
+            <dl>
+              <dt>Name:</dt>
+              <dd><input class="form-control" type="text" name="uname" #uname="ngModel" ngModel required></dd>
+            </dl>
+            <dl>
+              <dt>Email:</dt>
+              <dd><input class="form-control" type="email" name="email" #email="ngModel" ngModel></dd>
+            </dl>
+            <dt>City:</dt>
+            <dd>
+              <select class="form-control" name="city" #city="ngModel" ngModel>
+                <option>Hyd</option>
+                <option>Delhi</option>
+              </select>
+            </dd>
+            <button class="btn btn-success btn-block mt-4">Submit</button>
+          </form>
+    </div>
+  </div>
+  
+  
+  <div class="mt-5">
+      <h2>User Details</h2>
+      <dl>
+        <dt>Name:</dt>
+        <dd>{{uname.value}}</dd>
+        <dt>Email:</dt>
+        <dd>{{email.value}}</dd>
+        <dt>City</dt>
+        <dd>{{city.value}}</dd>
+      </dl>
+  </div>
+</div>

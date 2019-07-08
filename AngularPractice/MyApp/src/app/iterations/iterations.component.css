@@ -1,0 +1,64 @@
+.even {
+    background: linear-gradient(30deg,black,darkcyan);
+    color: white;
+    text-align: center;
+
+}
+.odd {
+    background: linear-gradient(30deg,black,orangered);
+    color: white;
+    text-align: center;
+}
+th { 
+    color: white;
+    background-color: royalblue;
+    font-size: 25px;
+}
+table {
+    margin: auto;
+    border: 0.5px solid white;
+}
+button {
+    outline: none;
+    border: none;
+    background: linear-gradient(45deg, blue,black);
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+    margin: 10px;
+    width: 100px;
+}
+button:hover{
+    box-shadow: 0 0 10px white;
+}
+fieldset{
+    background: linear-gradient(45deg,blue,aqua,rgb(48, 165, 219));
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+legend{
+    background: linear-gradient(45deg,rgb(47, 45, 155),blue);
+    border: none;
+    box-shadow: 0 0 5px black;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+input{
+    outline: none;
+    border: none;
+    box-shadow: 0 0 10px black;
+    font-size: 20px;
+    border-radius: 10px;
+    height: 30px;
+}
+input:hover{
+    box-shadow: 0 0 10px white;
+}
+dt{
+    font-size: 20px;
+    color: white;
+}

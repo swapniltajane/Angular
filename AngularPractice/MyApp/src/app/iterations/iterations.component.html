@@ -1,0 +1,29 @@
+<fieldset>
+  <legend>Add Record</legend>
+  <dl>
+    <dt>Name :</dt>
+    <dd><input type="text" name="Name" [value]="name" [(ngModel)]="Name"></dd>
+    <dt>Price :</dt>
+    <dd><input type="text" name="Price" [value]="price" [(ngModel)]="Price"></dd>
+  </dl>
+  <br>
+  <button type="button" (click)="addProduct()">Add</button>
+  <span>|</span>
+  <button type="button" (click)="saveProduct()">Save</button>
+</fieldset>
+<br>
+<table border="1" width="600">
+  <th>Id</th>
+  <th>Name</th>
+  <th>Price</th>
+  <th>Action</th>
+  <tr [class.odd]="odd" [class.even]="even" *ngFor="let item of products;let i=index;let odd=odd;let even=even">
+    <td>{{item.Id}}</td>
+    <td>{{item.Name}}</td>
+    <td>{{item.Price}}</td>
+    <td><button (click)="deleteProduct(i)">Delete</button>
+      <span>|</span>
+    <button (click)="editProduct(i)">Edit</button></td>
+  </tr>
+</table>
+
